@@ -23,6 +23,13 @@ class UserTest < ActiveSupport::TestCase
   test "name should be at least 3 characters" do
     @user.name = "a" * 2
     assert_not @user.valid?
-  end  
+  end
+  
+  test "name should be unique" do
+    duplicate_user = @user.dup
+    @user.save
+    assert_not duplicate_user.valid?
+  end
+  
   
 end
