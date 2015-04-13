@@ -20,10 +20,10 @@ class UserTest < ActiveSupport::TestCase
     assert_not @user.valid? 
   end 
   
-  test "name should have a minimum length" do
-    @user.name = "a" * 2
-    assert_not @user.valid?
-  end
+ # test "name should have a minimum length" do
+ #   @user.name = "a" * 2
+ #   assert_not @user.valid?
+ # end
   
   test "name should be unique" do
     duplicate_user = @user.dup

@@ -1,1 +1,5 @@
-# empty 
+jesse:
+  name: Jesse Pinkman
+  email: jpinkman@meth.com
+  password_digest: <%= User.digest('password') %>
+  
